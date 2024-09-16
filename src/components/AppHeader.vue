@@ -60,7 +60,7 @@ export default{
                     margin: 0.5rem;
 
                     &:hover{
-                        color: blue;
+                        color: #0282F9;
                         cursor: pointer;
                     }
                  }
