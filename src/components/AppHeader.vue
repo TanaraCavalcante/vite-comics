@@ -8,6 +8,10 @@ export default{
 }
 </script>
 
-<template></template>
+<template>
+    <header>
+        <h1>header</h1>
+    </header>
+</template>
 
 <style scoped></style>
