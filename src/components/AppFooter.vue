@@ -10,8 +10,8 @@ export default{
 
 <template>
     <footer>
-        <h1>footer</h1>
+        <h1>Footer</h1>
     </footer>
 </template>
 
-<style scoped></style>
+<style  scoped></style>

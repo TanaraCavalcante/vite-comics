@@ -10,7 +10,7 @@ export default{
 
 <template>
     <header>
-        <h1>header</h1>
+        <h1>Header</h1>
     </header>
 </template>
 
