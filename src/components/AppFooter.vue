@@ -49,6 +49,13 @@ export default{
                 ]
             }
            ],
+           social:[
+                "facebook",
+                "twitter",
+                "youtube",
+                "pinterest",
+                "periscope"
+           ],
         }
     }
 }
@@ -60,7 +67,7 @@ export default{
             <div class="container">
                 <ul>
                     <li>
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics" >
+                        <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics">
                         digital comics
                     </li>
                     <li> 
@@ -83,26 +90,27 @@ export default{
             </div>
         </section>
         <section id="info">
-            <div v-for="item in content" class="container">
+            <div v-for="item in content" class="container" id="DC-links">
                 <h4>{{ item.title }}</h4>
                 <ul>
                     <li v-for="(item, index) in content" :key="index">
-                        <a href="#">{{ content[index].listItem.item}}</a>
+                        <a href="#">{{item.listItem[index]}}</a>
                     </li>
                 </ul>
             </div>
+            
         </section>
         <section id="follow">
             <div class="container">
                  <button>SIGN-UP NOW!</button>
                  <div >
                     <h4>FOLLOW-US</h4>
-                    <div id="links">
-                        <a href="#"><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twiter"></a>
+                    <div id="links" v-for="item in social">
+                        <a href="#"><img src="../assets/img/footer-{{ item }}.png" alt="{{ item }}"></a>
+                        <!-- <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twiter"></a>
                         <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
                         <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
-                        <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>  
+                        <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>   -->
                     </div>    
                  </div>
             </div>
@@ -124,7 +132,7 @@ footer{
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            
             li{
                 display: flex;
                 align-items: center;
@@ -143,10 +151,18 @@ footer{
     #info {
         background-image: url(../assets/img/footer-bg.jpg);
         background-size: cover;
-        padding: 30px;
-        height: 400px;
+        padding: 30px; 
+        height: 300px;
+        display: flex;
         
-        
+
+          #DC-links{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+
+          }
     }
     #follow {
         background-color: #303030;
@@ -156,6 +172,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: space-between;
+        
         }
 
         div button {
