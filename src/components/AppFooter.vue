@@ -97,13 +97,13 @@ export default{
                  <button>SIGN-UP NOW!</button>
                  <div>
                     <h4>FOLLOW-US</h4>
-                    <ul>
-                        <li><img src="../assets/img/footer-facebook.png" alt="Facebook"></li>
-                        <li><img src="../assets/img/footer-twitter.png" alt="Twiter"></li>
-                        <li><img src="../assets/img/footer-youtube.png" alt="youtube"></li>
-                        <li><img src="../assets/img/footer-pinterest.png" alt="pinterest"></li>
-                        <li><img src="../assets/img/footer-periscope.png" alt="periscope"></li>
-                    </ul>
+                    <div>
+                        <a href="#"><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twiter"></a>
+                        <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+                        <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+                        <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>  
+                    </div>    
                  </div>
             </div>
         </section>
@@ -163,6 +163,11 @@ footer{
             padding:15px;
             border: 2px solid  #0282F9;
             color: white;
+
+                &:hover{
+                        color: #0282F9;
+                        cursor: pointer;
+                        }
         }
 
         h4{
@@ -170,10 +175,13 @@ footer{
             margin-right: 10px;
         }
 
-        ul{
+        div{
             display: flex;
             gap: 10px;
+
+            
         }
+
 
     }
 }   
