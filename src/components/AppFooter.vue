@@ -5,7 +5,7 @@ export default{
            content: [
             {
                 title:"DC COMICS",
-                listItem: [
+                listItem: [     //content[i].listItem
                     "Caracters",
                     "Comics",
                     "Movies",
@@ -86,8 +86,8 @@ export default{
             <div v-for="item in content" class="container">
                 <h4>{{ item.title }}</h4>
                 <ul>
-                    <li>
-                        <a href="#"></a>
+                    <li v-for="(item, index) in content" :key="index">
+                        <a href="#">{{ content[index].listItem.item}}</a>
                     </li>
                 </ul>
             </div>
