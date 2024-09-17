@@ -2,7 +2,53 @@
 export default{
     data () {
         return{
-           
+           content: [
+            {
+                title:"DC COMICS",
+                listItem: [
+                    "Caracters",
+                    "Comics",
+                    "Movies",
+                    "TV",
+                    "Games",
+                    "Videos",
+                    "News"
+                ],
+            },
+            {
+                title:"SHOP",
+                 listItem: [
+                    "Shop DC",
+                    "Shop DC Collextibles",                  
+                ],
+            },
+            {
+                title:"DC",
+                 listItem: [
+                    "Terms of use",
+                    "Privacy policy (Nex)",
+                    "Ad Choices",
+                    "Adversing",
+                    "Jobs",
+                    "Subscriptions",
+                    "Talent Workshops",
+                    "CPSC Certificates",
+                    "Ratings",
+                    "Shop Help",
+                    "Contact Us"
+                ]
+            },
+            {
+                title:"Sites",
+                 listItem: [
+                    "DC",
+                    "MAD Magazine",
+                    "DC Kids",
+                    "DC Universe",
+                    "DC Power Visa" 
+                ]
+            }
+           ],
         }
     }
 }
@@ -10,7 +56,7 @@ export default{
 
 <template>
     <footer>
-        <section id="shopping">
+        <section id="shop">
             <div class="container">
                 <ul>
                     <li>
@@ -36,8 +82,31 @@ export default{
                 </ul>
             </div>
         </section>
-        <section></section>
-        <section></section>
+        <section id="info">
+            <div v-for="item in content" class="container">
+                <h4>{{ item.title }}</h4>
+                <ul>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="follow">
+            <div class="container">
+                 <button>SIGN-UP NOW!</button>
+                 <div>
+                    <h4>FOLLOW-US</h4>
+                    <ul>
+                        <li><img src="../assets/img/footer-facebook.png" alt="Facebook"></li>
+                        <li><img src="../assets/img/footer-twitter.png" alt="Twiter"></li>
+                        <li><img src="../assets/img/footer-youtube.png" alt="youtube"></li>
+                        <li><img src="../assets/img/footer-pinterest.png" alt="pinterest"></li>
+                        <li><img src="../assets/img/footer-periscope.png" alt="periscope"></li>
+                    </ul>
+                 </div>
+            </div>
+        </section>
     </footer>
 </template>
 
@@ -45,7 +114,7 @@ export default{
 footer{
     color: white;
 
-    #shopping {
+    #shop {
         background-color: #0282F9;
         padding: 50px;
         text-transform: uppercase;
@@ -69,7 +138,43 @@ footer{
             }
             
         }
+        
     }
-}
-    
+    #info {
+        background-image: url(../assets/img/footer-bg.jpg);
+        background-size: cover;
+        padding: 30px;
+        height: 400px;
+        
+        
+    }
+    #follow {
+        background-color: #303030;
+        padding: 30px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        div button {
+            background-color: #303030;
+            padding:15px;
+            border: 2px solid  #0282F9;
+            color: white;
+        }
+
+        h4{
+            color: #0282F9;
+            margin-right: 10px;
+        }
+
+        ul{
+            display: flex;
+            gap: 10px;
+        }
+
+    }
+}   
 </style>
