@@ -95,9 +95,9 @@ export default{
         <section id="follow">
             <div class="container">
                  <button>SIGN-UP NOW!</button>
-                 <div>
+                 <div >
                     <h4>FOLLOW-US</h4>
-                    <div>
+                    <div id="links">
                         <a href="#"><img src="../assets/img/footer-facebook.png" alt="Facebook"></a>
                         <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twiter"></a>
                         <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
@@ -175,14 +175,10 @@ footer{
             margin-right: 10px;
         }
 
-        div{
+        #links {
             display: flex;
-            gap: 10px;
-
-            
+            gap: 10px;  
         }
-
-
     }
 }   
 </style>
