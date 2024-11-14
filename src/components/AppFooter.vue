@@ -5,7 +5,7 @@ export default{
            content: [
             {
                 title:"DC COMICS",
-                listItem: [     //content[i].listItem
+                listItem: [     //content[i].listItem[i]
                     "Caracters",
                     "Comics",
                     "Movies",
@@ -49,6 +49,13 @@ export default{
                 ]
             }
            ],
+           links:[
+            "digital comics",
+            "dc merchandise",
+            "subscription",
+            "comic shop locator",
+            "dc power visa"
+           ]
         //    social:[
         //         "facebook",
         //         "twitter",
@@ -67,35 +74,19 @@ export default{
         <section id="shop">
             <div class="container">
                 <ul>
-                    <li>
+                    <li v-for="link in links">
                         <img src="../assets/img/buy-comics-digital-comics.png" alt="digital comics">
-                        digital comics
+                        <a href="#">{{ link }}</a>
                     </li>
-                    <li> 
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="merchandise" >
-                        dc merchandise
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="sunscription" >
-                        subscription
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="shop" >
-                        comic shop locator
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="power visa" >
-                        dc power visa
-                    </li>
+                    
                 </ul>
             </div>
         </section>
         <section id="info">
-            <div v-for="item in content" id="DC-links">
-                <h4>{{ item.title }}</h4>
+            <div  id="DC-links">
                 <ul>
-                    <li v-for="(item, index) in content" :key="index">
-                        <a href="#">{{item.listItem[index]}}</a>
+                    <li v-for="(item, index) in content" :key="index">{{ item.title }}
+                      <p v-for="(elemento, index) in item.listItem" :key="index">{{elemento}} </p> 
                     </li>
                 </ul>
             </div>
@@ -122,7 +113,7 @@ export default{
     </footer>
 </template>
 
-<style  scoped>
+<style lang="scss" scoped>
 footer{
     color: white;
 
@@ -171,10 +162,10 @@ footer{
 
           }
           img{
-            width: 23%;
+            width: 25%;
             position: absolute; 
-            top: -15px;
-            right: 250px;
+            top: -20px;
+            right: 280px;
           }
     }
     #follow {
